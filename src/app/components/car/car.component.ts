@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Input } from '@angular/core';
+import { Input, Output, EventEmitter } from '@angular/core';
 import { ICar } from '../../interfaces/car';
 import { CarApiService } from '../../services/car-api.service';
 
@@ -12,6 +12,7 @@ import { CarApiService } from '../../services/car-api.service';
 export class CarComponent {
 
   @Input() carData?:ICar;
+  @Output() carDeletedEvent = new EventEmitter<string>();
 
   carImageWidth: number = 300;
 
@@ -22,6 +23,8 @@ export class CarComponent {
       { 
         console.log(result);
       });
+
+    this.carDeletedEvent.emit("car got deleted");
   }
 
 }

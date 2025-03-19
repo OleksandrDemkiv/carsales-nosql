@@ -12,7 +12,7 @@ export class CarApiService {
 
   constructor(private _http:HttpClient) { }
 
-  private _siteURL = 'http://localhost:5050/cars';
+  private _siteURL = 'http://localhost:5000/cars';
 
   getCarDetails():Observable<any> {
 
@@ -36,7 +36,7 @@ export class CarApiService {
 
 
   delCarDetails(carId?:string):Observable<any> {
-    let deleteURL=this._siteURL+":"+carId;
+    let deleteURL=this._siteURL+"/"+carId;
     return this._http.delete(deleteURL)
     .pipe(
       tap(data => console.log('del car message/error' + JSON.stringify(data))

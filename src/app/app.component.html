@@ -1,4 +1,17 @@
 <div class="container">
-  <h1>Car Sales Application</h1>
-  <app-carlist></app-carlist>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="navbar-item active">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Cars</a>
+        </li>
+        <li class="navbar-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>

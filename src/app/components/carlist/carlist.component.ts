@@ -34,6 +34,11 @@ export class CarlistComponent {
       { this.carsData = carsData}
     );
 
+    this.getCars();
     return false;
+  }
+
+  refreshCars() {
+    this.getCars();
   }
 }
