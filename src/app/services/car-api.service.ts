@@ -12,7 +12,7 @@ export class CarApiService {
 
   constructor(private _http:HttpClient) { }
 
-  private _siteURL = 'http://localhost:5000/cars';
+  private _siteURL = 'http://ec2-108-129-186-72.eu-west-1.compute.amazonaws.com:5000/cars';
 
   getCarDetails():Observable<any> {
 
